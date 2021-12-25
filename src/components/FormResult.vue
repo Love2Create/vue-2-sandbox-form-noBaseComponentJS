@@ -1,23 +1,47 @@
 <template>
-<div>
-  <p>This is the result page</p>
+  <div>
+    <p>This is the result page</p>
 
-  <ul>Profile Information
-    <li v-for="(profile, index) in profileDataArray" :key="`profile-${index}`">{{ profile }}</li>
+    <ul>
+      Profile Information
+      <li v-for="(profile, index) in profileData" :key="`profile-${index}`">
+        {{ profile }}
+      </li>
     </ul>
 
-    </div>
+    <ul>
+      Address
+      <li v-for="(address, index) in addressData" :key="`address-${index}`">
+        {{ address }}
+      </li>
+    </ul>
+
+    <ul>
+      Login Information
+      <li v-for="(login, index) in loginData" :key="`login-${index}`">
+        {{ login }}
+      </li>
+    </ul>
+
+    <ul>
+      Optin Information
+      <li v-for="(optin, index) in optinData" :key="`optin-${index}`">
+        {{ optin }}
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  props:{
-    profileDataArray: Array,
-  }
-
-}
+  props: {
+    profileData: Object,
+    addressData: Object,
+    loginData: Object,
+    optinData: Object,
+  },
+};
 </script>
 
 <style>
-
 </style>

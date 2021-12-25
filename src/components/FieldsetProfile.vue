@@ -24,7 +24,8 @@
         type="text"
         name="firstName"
         v-model="profileObj.fName"
-        @change="emitValues"
+        @change="emitValues" 
+        required
       />
     </label>
     <label>
@@ -43,6 +44,7 @@
         name="lastName"
         v-model="profileObj.lName"
         @change="emitValues"
+        required
       />
     </label>
 
@@ -64,17 +66,17 @@
     <!-- gender -->
     <fieldset name="gender">
       <legend>Gender</legend>
-      <input type="radio" name="gender" value="female" id="female" v-model="profileObj.gender" @change="emitValues"/>
+      <input type="radio" name="gender" value="female" id="female" v-model="profileObj.gender" @change="emitValues" required/>
       <label for="female">Female</label>
-      <input type="radio" name="gender" value="male" id="male" v-model="profileObj.gender" @change="emitValues"/>
+      <input type="radio" name="gender" value="male" id="male" v-model="profileObj.gender" @change="emitValues" required/>
       <label for="ale">Male</label>
-      <input type="radio" name="gender" value="noAnswer" id="noAnswer" v-model="profileObj.gender" @change="emitValues"/>
+      <input type="radio" name="gender" value="noAnswer" id="noAnswer" v-model="profileObj.gender" @change="emitValues" required/>
       <label for="noAnswer">Prefer not to answer</label>
     </fieldset>
 
     <!-- birthday -->
     <label>Birthday
-      <input type="date" name="bday" v-model="profileObj.bday" @change="emitValues" />
+      <input type="date" name="bday" v-model="profileObj.bday" @change="emitValues" required/>
       </label>
 
     <!-- end of fieldset -->
